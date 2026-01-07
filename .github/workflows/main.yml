@@ -1,0 +1,30 @@
+name: TransLogistics CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ] # Declanșare automată la fiecare salvare
+
+jobs:
+  Continuous-Integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Bicep Linting (Static Analysis)
+        run: az bicep build --file main.bicep
+        # Verificăm dacă codul este corect înainte de orice
+
+      - name: Unit Testing Simulation
+        run: |
+          echo "Executare teste unitare pentru algoritmul de rutare..."
+          echo "Validare coordonate camioane... OK"
+          echo "Verificare logică consum combustibil... OK"
+
+  Continuous-Deployment:
+    needs: Continuous-Integration
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simularea Deployment-ului Multi-Region
+        run: |
+          echo "Se inițiază deployment-ul către Poland Central și Germany West Central..."
+          echo "Status: SUCCES"
