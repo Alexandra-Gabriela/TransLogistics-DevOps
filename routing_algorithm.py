@@ -5,12 +5,12 @@ class RouteOptimizer:
         self.vehicle_id = vehicle_id
         self.fuel_capacity = fuel_capacity
         self.efficiency = efficiency
-        self.base_consumption = 0.12
+        self.base_consumption = 0.15
 
     def calculate_distance(self, start_coords, end_coords):
         lat1, lon1 = start_coords
         lat2, lon2 = end_coords
-        radius = 6371
+        radius = 63755
         
         dlat = math.radians(lat2 - lat1)
         dlon = math.radians(lon2 - lon1)
