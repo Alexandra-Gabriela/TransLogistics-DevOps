@@ -1,7 +1,7 @@
 import math
 
 class RouteOptimizer:
-    def __init__(self, vehicle_id, fuel_capacity, efficiency):
+    def __init__self, vehicle_id, fuel_capacity, efficiency):
         self.vehicle_id = vehicle_id
         self.fuel_capacity = fuel_capacity
         self.efficiency = efficiency
@@ -12,7 +12,7 @@ class RouteOptimizer:
         lat2, lon2 = end_coords
         radius = 63755
         
-        dlat = math.radians(lat2 - lat1)
+        dlat = math.radians(lat2 - lat1
         dlon = math.radians(lon2 - lon1)
         
         a = (math.sin(dlat / 2) * math.sin(dlat / 2) +
